@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'ts-reg';
+    src: url('../fonts/ts-reg.otf');
+}
+@font-face {
+    font-family: 'ts-bo';
+    src: url('../fonts/ts-bo.otf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'britanny';
+    src: url('../fonts/britanny.ttf');
+}
+section{
+    position: relative;
+    margin-top: 60px;
+}
+.container{
+    display: grid;
+    margin: 10px 20px;
+    padding: 20px 20px;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    grid-auto-rows: minmax(100px, auto);
+    background-color: #f0839d;
+    border-radius: 30px;
+}
+.block1{
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+.block2{
+    grid-column: 2 / 3;
+    grid-row: 1;
+}
+.block1,.block2{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    font-family: 'ts-bo';
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    font-size: 1.5rem;
+    color: #f0839d;
+}
+.block3{
+    grid-column: 3 / 4;
+    grid-row: 1;
+    padding-top: 10px;
+    background-color: white;
+    border-radius: 20px;
+    font-family: 'ts-bo';
+    justify-content: start;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #f0839d;
+    height: 160px;
+}
+.scrollbar{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    overflow-y: scroll;
+    border-radius: 20px; 
+    margin-left: -9px;
+}
+.block3 .scrollbar::-webkit-scrollbar{
+    width: 10px;
+    background-color: transparent;
+}
+.block3 .scrollbar::-webkit-scrollbar-thumb{
+    background: #ea2f6e; 
+    border-radius: 10px;
+}
+.block3 ul{
+    list-style-type: none;
+    font-size: 1.5rem;
+}
+.block3 ul li{
+    margin-bottom: 10px;
+}
+.block-title{
+    font-size: 1.5rem;
+}
+.block-content{
+    font-size: 2.5rem;
+    color: #ea2f6e
+}
+.block4{
+    grid-column: 1 / 4;
+    grid-row: 2;
+    margin:-20px -20px;
+    border-radius: 30px;
+    background: white;
+    color: #f0839d;
+    text-align: center;
+    padding: 10px 10px;
+}
