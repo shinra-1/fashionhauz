@@ -286,13 +286,14 @@ h4{
     }
     .loginhead{
         font-size: 2rem;
-        margin-top: -1rem;
+        margin-top: 0rem;
     } 
     .reghead {
         font-size: 1.5rem; /* Smaller font size on mobile */
     }
     form .label {
         font-size: 1.5rem; /* Smaller label font size */
+        margin-bottom: -0.5rem;
     }
     form .showpw label{
         font-size: 0.9rem;
