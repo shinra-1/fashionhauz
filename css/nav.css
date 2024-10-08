@@ -96,6 +96,10 @@ body{
     transition: transform 0.5s ease, opacity 0.5s ease;
     z-index: 2;
 }
+.menubar ul li:hover >.dropdown {
+    transform: translateY(0);
+    opacity: 1; 
+}
 
 #burger{
     display: none;
