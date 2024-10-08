@@ -93,11 +93,14 @@ body{
     border-radius: 10px;padding: 10px;
     background: white;
     transition: transform 0.5s ease, opacity 0.5s ease;
-    z-index: 1000;
+    z-index: 2;
 }
-.menubar ul li:hover >.dropdown {
-    transform: translateY(0);
-    opacity: 1; 
+
+#burger{
+    display: none;
+}
+#close{
+    display: none;
 }
 @media (max-width: 1200px){
     .titlebar{
@@ -146,8 +149,74 @@ body{
     }
 }
 @media (max-width: 600px){
+    #burger{
+        display: block;
+        width: 25px;
+        height: 25px;
+        margin-top: 23px;
+        margin-right: 10px;
+    }
+    #close{
+        display: block;
+        position: absolute;
+        margin-top: -6rem;
+        margin-left: 8.5rem;
+    }
     .menubar{
         display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+        margin: 0;
+        background-color: rgb(255, 255, 255);
+        z-index: 1000;
+        transition: all 0.5s ease-in-out;
+    }
+    .margin-top{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 3rem;
+        align-items: center;
+    }
+    .menubar ul li a{
+        color: #ff9fb6;
+        font-size: 2rem;
+        text-align: center;
+        transition: all 0.6s ease-in-out;
+    }
+    .menubar ul li .dropdown{
+        display: none;
+        flex-direction: column;
+        position: relative;
+        height: 0px;
+        opacity: 0; 
+        top: 100%;left: 0;
+        border-radius: 10px;
+        background: white;
+        transform: translateY(-100px);
+        transition: transform 0.8s ease, opacity 0.5s ease, height 0.5s ease;
+        z-index: 2;
+        gap: 0.5rem;
+    }
+    .menubar ul li:hover >.dropdown {
+        display: flex;
+        height: 150px;
+        transform: translateY(0);
+        opacity: 1; 
+    }
+    .dd{
+        margin-bottom: 0;
+    }
+    .menubar ul li a:hover{
+        transition: all 0.4s ease-in-out;
+        font-size: 2rem;
+        color: #f0839d;
+        
     }
 }
 @media (max-width: 360px){
@@ -157,5 +226,8 @@ body{
     .titlebar img{
         width: 50px;
         height: 50px;
+    }
+    #burger{
+        margin-top: 11px;
     }
 }
