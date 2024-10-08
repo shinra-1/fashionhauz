@@ -177,7 +177,7 @@ section{
         margin-top: 10px;
     }
 }
-@media (max-width: 375px){
+@media (max-width: 360px){
     .block1,.block2{
         width: 280px;
         padding: 10px 0 10px 0;
