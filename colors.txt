@@ -1,0 +1,7 @@
+background:  #f4d9d0
+nav-bg: #f0839d
+card-bg: #f0839d
+headlines: #ea2f6e
+title colors: #ff9fb6;
+accept button: #f0839d
+reject button: #f4d9d0
