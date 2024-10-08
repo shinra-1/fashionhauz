@@ -1,111 +1,3 @@
-<?php 
-include "config.php";
-session_start();
-if (isset($_SESSION['error'])) {
-    $login_err = $_SESSION['error'];
-    unset($_SESSION['error']);
-}
-
-// email structure verificator
-function isValidEmail($conn,$email) {
-    $sql = "SELECT email FROM users WHERE email = ?";
-    if($statement = mysqli_prepare($conn, $sql)){
-        mysqli_stmt_bind_param($statement, "s", $param_email);
-        $param_email = trim($_POST["email"]); // set parameter
-        if(mysqli_stmt_execute($statement)){ // execute
-            mysqli_stmt_store_result($statement);
-            if(mysqli_stmt_num_rows($statement) == 0){
-                return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
-            } else{
-                echo '<script language="javascript">alert("Email already exists!");</script>';
-                echo '<script language="javascript">window.location = "index.php";</script>';
-            }
-        } else{
-            echo "Something went wrong with email verification. Please try again.";
-        }
-        mysqli_stmt_close($statement);
-    }
-    
-}
-
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    
-    $email = $_POST['email'];
-	$usern = $_POST['usern'];
-	$pword = $_POST['pword'];
-
-    if(isValidEmail($conn,$email)){
-        if(empty(trim($_POST["usern"]))){ // check if tama username
-            $username_err = "Please enter a username.";
-        }else if(!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["usern"]))){
-            $username_err = "Username can only contain letters, numbers, and underscores.";
-        }else{
-            $sql = "SELECT userID FROM users WHERE uname = ?";
-            if($statement = mysqli_prepare($conn, $sql)){
-                mysqli_stmt_bind_param($statement, "s", $param_username);
-                $param_username = trim($_POST["usern"]); // set parameter
-                if(mysqli_stmt_execute($statement)){ // execute
-                    mysqli_stmt_store_result($statement);
-                    
-                    if(mysqli_stmt_num_rows($statement) == 1){
-                        $login_err = "This username is already taken.";
-                    } else{
-                        $usern = trim($_POST["usern"]);
-                    }
-                } else{
-                    echo "Oops! Something went wrong. Please try again later.";
-                }
-                mysqli_stmt_close($statement);
-            }
-        }
-        if(empty(trim($_POST["pword"]))){// check if tama pw
-            $password_err = "Please enter a password.";     
-        }else if(strlen(trim($_POST["pword"])) < 8){
-            $login_err = "Password must have atleast 8 characters.";
-        }else{
-            $pword = trim($_POST["pword"]);
-        }
-        if(empty($login_err)){//check input errors bago ipasok sa db
-            $search = mysqli_query($conn, "SELECT * FROM users");
-            if(mysqli_fetch_assoc($search) == 0){
-                $sql = "INSERT INTO users (email, uname, pword, category) VALUES (?, ?, ?, 'admin')";   
-                if($statement = mysqli_prepare($conn, $sql)){
-                    mysqli_stmt_bind_param($statement, "sss", $param_email, $param_username, $param_password);
-                    // set parameter
-                    $param_email = $email;
-                    $param_username = $usern;
-                    $param_password = password_hash($pword, PASSWORD_DEFAULT); // creates a password hash
-                    if(mysqli_stmt_execute($statement)){// execute
-                        echo '<script language="javascript">alert("Successfully Registered!");</script>';
-                        echo '<script language="javascript">window.location = "index.php";</script>';//palitan pupuntahan nito if ok na yung login
-                    }else{
-                        echo "Oops! Something went wrong. Please try again later.";
-                    }
-                    mysqli_stmt_close($statement);// close
-                }
-            }else{
-                $sql = "INSERT INTO users (email, uname, pword, category) VALUES (?, ?, ?, 'customer')";   
-                if($statement = mysqli_prepare($conn, $sql)){
-                    mysqli_stmt_bind_param($statement, "sss", $param_email, $param_username, $param_password);
-                    // set parameter
-                    $param_email = $email;
-                    $param_username = $usern;
-                    $param_password = password_hash($pword, PASSWORD_DEFAULT); // creates a password hash
-                    if(mysqli_stmt_execute($statement)){// execute
-                        echo '<script language="javascript">alert("Successfully Registered!");</script>';
-                        echo '<script language="javascript">window.location = "index.php";</script>';//palitan pupuntahan nito if ok na yung login
-                    }else{
-                        echo "Oops! Something went wrong. Please try again later.";
-                    }
-                    mysqli_stmt_close($statement);// close
-                }
-            }
-        }
-    }
-    
-    mysqli_close($conn);
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,9 +11,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="background-blur"></div>
     <div class="container" id="main">
         <div class="log-in">
-            <form action="loginaction.php" method="post">
+            <form action="dashboard.html" method="post">
                 <h1 class="loginhead">Login</h1>
-                <?php if(!empty($login_err)){echo '<div class="errormsg">'.$login_err.'</div>';} ?> 
+<!--                 -->
                 <label class="label" for="uname">Username</label>
                 <input class="icon-user" type="text" name="uname" required="">
                 <label class="label" for="pw">Password</label>
@@ -132,9 +24,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             
         </div>
         <div class="sign-up">
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <form action="dashboard.html" method="post">
                 <h1 class="reghead">Register</h1>
-                <?php if(!empty($login_err)){echo '<div class="errormsg">'.$login_err.'</div>';} ?>
+<!--                  -->
                 <label class="label" for="email">Email</label>
                 <input class="icon-email" type="email" name="email" id="email" required="">
                 <label class="label" for="usern">Username</label>
