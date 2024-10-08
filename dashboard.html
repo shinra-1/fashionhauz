@@ -1,32 +1,4 @@
-<?php
 
-include 'config.php';
-function isValidUser($conn, $username) {
-    $stmt = $conn->prepare("SELECT uname FROM users WHERE uname = ?");
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $stmt->store_result();
-    return $stmt->num_rows > 0; // Returns true if the user exists
-}
-if (isset($_COOKIE['username'])) {
-    $username = htmlspecialchars($_COOKIE['username']);
-
-    // Validate the cookie against the database
-    if (isValidUser($conn, $username)) {
-        
-    } else {
-        echo "Invalid session. Please log in again.";
-        // Optionally, delete the cookie if invalid
-        setcookie("username", "", time() - 604800, "/");
-        setcookie("category", "", time() - 604800, "/");
-        setcookie("loggedin", "", time() - 604800, "/");
-        setcookie("id", "", time() - 604800, "/");
-    }
-} else {
-    echo "Hello, Guest! Please log in.";
-    header("location: index.php");//palitan to pag may login page na
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
