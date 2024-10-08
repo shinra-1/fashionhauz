@@ -20,8 +20,8 @@ section{
     margin: 10px 20px;
     padding: 20px 20px;
     position: relative;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
     grid-auto-rows: minmax(100px, auto);
     background-color: #f0839d;
     border-radius: 30px;
@@ -34,8 +34,8 @@ section{
     grid-column: 2 / 3;
     grid-row: 1;
 }
-.block1,.block2{
-    width: 475px;
+.block1,.block2,.block3{
+    width: 350px;
     padding: 10px 0 10px 0;
     display: flex;
     flex-direction: column;
@@ -48,8 +48,8 @@ section{
     font-size: 1.5rem;
     color: #f0839d;
 }
-.block3{
-    grid-column: 3 / 4;
+.block4{
+    grid-column: 4 / 5;
     grid-row: 1;
     padding-top: 10px;
     background-color: white;
@@ -60,7 +60,7 @@ section{
     font-size: 1.5rem;
     color: #f0839d;
     height: 160px;
-    width: 475px;
+    width: 350px;
 }
 .scrollbar{
     display: flex;
@@ -71,19 +71,19 @@ section{
     border-radius: 20px; 
     margin-left: -9px;
 }
-.block3 .scrollbar::-webkit-scrollbar{
+.block4 .scrollbar::-webkit-scrollbar{
     width: 10px;
     background-color: transparent;
 }
-.block3 .scrollbar::-webkit-scrollbar-thumb{
+.block4 .scrollbar::-webkit-scrollbar-thumb{
     background: #ea2f6e; 
     border-radius: 10px;
 }
-.block3 ul{
+.block4 ul{
     list-style-type: none;
     font-size: 1.5rem;
 }
-.block3 ul li{
+.block4 ul li{
     margin-bottom: 10px;
 }
 .block-title{
@@ -93,8 +93,8 @@ section{
     font-size: 2.5rem;
     color: #ea2f6e
 }
-.block4{
-    grid-column: 1 / 4;
+.block5{
+    grid-column: 1 / 5;
     grid-row: 2;
     margin:-20px -20px;
     border-radius: 30px;
@@ -107,17 +107,20 @@ section{
     section{
         margin-top: 60px;
     }
-    .block1,.block2{
-        width: 280px;
+    .container{
+        gap: 40px;
     }
-    .block3{
-        width: 280px;
+    .block1,.block2,.block3,.block4{
+        width: 250px;
+    }
+    .block5{
+        width: 1160px;
     }
 }
 @media (max-width: 800px){
     .container{
-        grid-template-columns: repeat(3, 1fr);
-        gap: 45px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
     }
     .block1{
         grid-column: 1/2;
@@ -127,17 +130,21 @@ section{
         grid-column: 2/3;
         grid-row: 1;
     }
-    .block1,.block2{
-        width: 200px;
-    }
     .block3{
-        grid-column: 3/4;
-        grid-row: 1;
-        width: 200px;
+        grid-column: 1/2;
+        grid-row: 2;
+    }
+    .block1,.block2,.block3,.block4{
+        width: 340px;
     }
     .block4{
-        grid-column: 1/4;
+        grid-column: 2/3;
         grid-row: 2;
+    }
+    .block5{
+        grid-column: 1/5;
+        grid-row: 3;
+        width: 760px;
     }
 }
 @media (max-width: 600px){
@@ -153,8 +160,12 @@ section{
         grid-column: 1;
         grid-row: 2;
     }
-    .block1,.block2{
-        width: 345px;
+    .block3{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .block1,.block2,.block3{
+        width: 520px;
         display: flex;
         flex-direction: column;
         background-color: white;
@@ -166,26 +177,27 @@ section{
         font-size: 1.5rem;
         color: #f0839d;
     }
-    .block3{
-        grid-column: 1;
-        grid-row: 3;
-        width: 345px;
-    }
     .block4{
         grid-column: 1;
         grid-row: 4;
+        width: 520px;
+    }
+    .block5{
+        grid-column: 1;
+        grid-row: 5;
         margin-top: 10px;
+        width: 560px;
     }
 }
 @media (max-width: 360px){
-    .block1,.block2{
+    .block1,.block2,.block3{
         width: 280px;
         padding: 10px 0 10px 0;
     }
-    .block3{
+    .block4{
         width: 280px;
     }
-    .block4{
+    .block5{
         width: 320px;
     }
 }
