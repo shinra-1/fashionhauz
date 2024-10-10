@@ -213,7 +213,7 @@ td .option a{
     }
     .table-bg{
         margin: 70px 0 20px 20px;
-        height: 75vh;
+        height: 72vh;
     }
     table, thead, tbody{
         display: flex;
@@ -221,7 +221,7 @@ td .option a{
     }
     tbody{
         overflow-x: scroll;
-        min-height: 68vh;
+        min-height: 63vh;
         margin-top: 7px;
     }
     thead{
