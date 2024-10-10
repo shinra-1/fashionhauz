@@ -140,5 +140,22 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.getElementById("dd").onclick = function() {
+            var text = document.getElementById("dropdown");
+            text.style.display = "flex"; 
+            text.style.height = "150px"; 
+            text.style.transform = "translateY(0)";
+            text.style.opacity = "1"; 
+        }; 
+        document.getElementById("close").onclick = function() {
+            document.getElementById('menubar').style.display = 'none';
+            var text = document.getElementById("dropdown");
+            text.style.display = "none"; 
+            text.style.height = "0px"; 
+            text.style.transform = "translateY(-100px)";
+            text.style.opacity = "0"; 
+        };  
+    </script>
 </body>
 </html>
