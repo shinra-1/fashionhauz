@@ -145,7 +145,7 @@ td .option a{
 }
 @media (max-width: 600px){
     .upper{
-        margin-left: 135px;
+        margin-left: 125px;
         margin-top: 110px;
     }
     .upper button{
