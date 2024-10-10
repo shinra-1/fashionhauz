@@ -197,7 +197,7 @@ td .option a{
         margin-top: 10px;
     }
 }
-@media (max-width: 420px){
+@media (max-width: 450px){
     .upper{
         margin-left: 145px;
         margin-top: 100px;
@@ -258,16 +258,16 @@ td .option a{
     tbody{
         overflow-x: scroll;
         min-height: 62vh;
-        margin-top: 5px;
+        margin-top: 0px;
     }
     thead{
-        margin-top: 10px;
+        margin-top: 0px;
         width: 500px;
         border-right:2px solid #ff4571; 
     }
     th{
         display: flex;
-        padding: 23px 5px 15px 6px; 
+        padding: 20px 5px 15px 6px; 
         text-align: left; 
         border-bottom: none; 
         color: white; 
