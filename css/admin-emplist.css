@@ -145,7 +145,8 @@ td .option a{
 }
 @media (max-width: 600px){
     .upper{
-        margin-left: 35px;
+        margin-left: 240px;
+        margin-top: 110px;
     }
     .upper button{
         width: 120px;
@@ -156,10 +157,11 @@ td .option a{
     }
     .content-title{
         font-size: 2rem;
-        margin-left: 40px;
+        margin-left: 0px;
+        margin-top: -100px;
     }
     .table-bg{
-        margin: 20px 0 20px 35px;
+        margin: 70px 0 20px 30px;
         height: 72vh;
     }
     table, thead, tbody{
