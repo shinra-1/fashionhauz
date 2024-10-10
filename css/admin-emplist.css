@@ -145,7 +145,7 @@ td .option a{
 }
 @media (max-width: 600px){
     .upper{
-        margin-left: 240px;
+        margin-left: 140px;
         margin-top: 110px;
     }
     .upper button{
@@ -161,8 +161,9 @@ td .option a{
         margin-top: -100px;
     }
     .table-bg{
-        margin: 70px 0 20px 30px;
-        height: 72vh;
+        margin: 70px 0 20px 25px;
+        height: 50vh;
+        width: 89%;
     }
     table, thead, tbody{
         display: flex;
@@ -170,16 +171,16 @@ td .option a{
     }
     tbody{
         overflow-x: scroll;
-        min-height: 64vh;
-        margin-top: 15px;
+        height: 46vh;
+        margin-top: 0px;
     }
     thead{
-        width: 300px;
+        width: 650px;
         border-right:2px solid #ff4571; 
     }
     th{
         display: flex;
-        padding: 6px 0px 15px 6px; 
+        padding: 0px 0px 15px 6px; 
         text-align: left; 
         border-bottom: none; 
         color: white; 
@@ -191,9 +192,9 @@ td .option a{
     }
     td{
         flex: 1;
-        padding: 0px 0px;
+        padding: 0px 10px;
         font-size: 1.2rem;
-        margin: 0;
+        margin-top: 10px;
     }
 }
 @media (max-width: 360px){
