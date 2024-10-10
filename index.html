@@ -1,44 +1,42 @@
-<?php
-
-include 'config.php';
-function isValidUser($conn, $username) {
-    $stmt = $conn->prepare("SELECT uname FROM users WHERE uname = ?");
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $stmt->store_result();
-    return $stmt->num_rows > 0; // Returns true if the user exists
-}
-if (isset($_COOKIE['username'])) {
-    $username = htmlspecialchars($_COOKIE['username']);
-
-    // Validate the cookie against the database
-    if (isValidUser($conn, $username)) {
-        
-    } else {
-        echo "Invalid session. Please log in again.";
-        // Optionally, delete the cookie if invalid
-        setcookie("username", "", time() - 604800, "/");
-        setcookie("category", "", time() - 604800, "/");
-        setcookie("loggedin", "", time() - 604800, "/");
-        setcookie("id", "", time() - 604800, "/");
-    }
-} else {
-    echo "Hello, Guest! Please log in.";
-    header("location: index.php");//palitan to pag may login page na
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/admin-emplist.css">
+    <link rel="stylesheet" type="text/css" href="css/admin-nav.css">
+    <link rel="stylesheet" type="text/css" href="css/admin-footer.css">
     <link rel="icon" href="images/logo.ico" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <title>Edz FashionHauz</title>
 </head>
 <body>
-    <?php include 'admin-nav.php'; ?>
+    <nav>
+        <div class="navbg"></div>
+        <div class="nav-section">
+            <div class="titlebar">
+                <img src="images/logo.png" alt="logo">
+                <h1>Edz FashionHauz</h1>
+            </div>
+            <div class="menubar space" id="menubar">
+                <ul class="margin-top">
+                    <img src="images/logo.png" alt="logo" class="menu-logo">
+                    <li><img src="icons/close.png" id="close" onclick=" alt="x"></li>
+                    <li><a href="admin-db.php" class="down">Dashboard </a><img src="icons/arrow-down.png" class="dd" id="dd" alt="arrowdown">
+                        <ul class="dropdown" id="dropdown">
+                            <li><a href="#">Orders</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="admin-employee.php">Employees</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Activity Logs</a></li>
+                    <li><a href="#">Sales Archives</a></li>
+                    <li><a href="#"><img src="icons/account.png" id="profile" alt="person"></a></li>
+                </ul>
+            </div>
+            <img src="icons/burger.png" class="dd" id="burger" onclick="document.getElementById('menubar').style.display = 'block'" alt="arrowdown">
+        </div>
+    </nav>
     <div class="upper margin">
         <button><img src="icons/create.png" alt="create">Create</button>
     </div>
@@ -121,6 +119,26 @@ if (isset($_COOKIE['username'])) {
             </table>
         </div>
     </section>
-    <?php include 'admin-footer.php'; ?>
+    <footer>
+        <div class="footer">
+            <div class="footer-left">
+                <a href="https://maps.app.goo.gl/as5gGNhoykXwh87ZA" target="_blank">
+                    <div class="addresses">
+                        <img src="icons/address.png" alt="address"><h5>Plaridel Crossing (Besides China Bank Savings)</h5>
+                    </div>
+                </a>
+                <a href="https://maps.app.goo.gl/aPWqfcpBvVpBifC97" target="_blank">
+                    <div class="addresses">
+                        <img src="icons/address.png" alt="address"><h5>Pulilan Crossing (In front of 588 Shopping Mall)</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="footer-right">
+                <a href="https://www.facebook.com/edzshoppingstore/" target="_blank"><img src="icons/fb.png" alt="fb"></a>
+                <a href="https://www.instagram.com/edzfashion_hauz/" target="_blank"><img src="icons/ig.png" alt="fb"></a>
+                <a href="https://www.tiktok.com/@edzfashionhauz" target="_blank"><img src="icons/tiktok.png" alt="fb"></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
