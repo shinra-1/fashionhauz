@@ -146,7 +146,7 @@ body{
         font-size: 1rem;
     }
 }
-@media (max-width: 600px){
+@media (max-width: 670px){
     .titlebar{
         font-size: 1.5rem;
     }
