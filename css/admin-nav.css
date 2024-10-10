@@ -181,6 +181,7 @@ body{
         background-color: #fff0ea;
         z-index: 1000;
         transition: all 0.5s ease-in-out;
+        overflow: hidden;
     }
     .margin-top{
         margin-top: 100px;
