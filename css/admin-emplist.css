@@ -180,7 +180,7 @@ td .option a{
     }
     th{
         display: flex;
-        padding: 2px 0px 15px 6px; 
+        padding: 1px 0px 15px 6px; 
         text-align: left; 
         border-bottom: none; 
         color: white; 
