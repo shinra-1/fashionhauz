@@ -1,19 +1,8 @@
-@font-face {
-    font-family: 'ts-reg';
-    src: url('../fonts/ts-reg.otf');
-}
-@font-face {
-    font-family: 'ts-bo';
-    src: url('../fonts/ts-bo.otf');
-    font-weight: bold;
-}
-@font-face {
-    font-family: 'britanny';
-    src: url('../fonts/britanny.ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
 section{
     position: relative;
-    margin-top: 90px;
+    margin-top: 60px;
 }
 .container{
     display: grid;
@@ -41,7 +30,7 @@ section{
     flex-direction: column;
     background-color: white;
     border-radius: 20px;
-    font-family: 'ts-bo';
+    font-family: "Playfair";
     justify-content: center;
     text-align: center;
     gap: 20px;
@@ -54,13 +43,13 @@ section{
     padding-top: 10px;
     background-color: white;
     border-radius: 20px;
-    font-family: 'ts-bo';
+    font-family: "Playfair";
     justify-content: start;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #f0839d;
     height: 160px;
-    width: 350px;
+    width: 330px;
 }
 .scrollbar{
     display: flex;
@@ -170,7 +159,7 @@ section{
         flex-direction: column;
         background-color: white;
         border-radius: 20px;
-        font-family: 'ts-bo';
+        font-family: "Playfair";
         justify-content: center;
         text-align: center;
         gap: 20px;

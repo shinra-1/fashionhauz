@@ -28,7 +28,7 @@ if(isset($_POST['push'])){
                         setcookie("id", $id, time() + (7 * 24 * 60 * 60), "/");
                         unset($_SESSION['error']);
                         if($category == "admin"){
-                            header("location: dashboard.php");
+                            header("location: admin-db.php");
                         }else if ($category == "customer"){
                             header("location: index.php");
                         }else{

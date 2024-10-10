@@ -1,4 +1,4 @@
-background:  #f4d9d0
+background:  #fff0ea
 nav-bg: #f0839d
 card-bg: #f0839d
 headlines: #ea2f6e
