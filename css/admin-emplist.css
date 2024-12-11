@@ -1,0 +1,440 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+.upper{
+    display: flex;
+    height: 50px;
+    width: 200px;
+    margin-top: 67px;
+    margin-left: 85px;
+}
+.upper button{
+    width: 150px;
+    font-family: "Playfair";
+    font-size: 2rem;
+    padding: 5px;
+    background-color: #ff9fb6;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.upper button:active{
+    transform: scale(120%);
+}
+.upper button img{
+    width: 30px; height: 30px;
+    margin: 0 10px -5px 0;
+}
+.content-title{
+    text-align: center;
+    margin-top: -50px;
+    font-family: "Playfair";
+    font-size: 2.5rem;
+    color: #f0839d;
+}
+/* table */
+.table-bg{
+    width: 90%;
+    min-height: 20vh;
+    height: 60vh;
+    margin: 20px 0 20px 80px;
+    background-color: #ff9fb6;
+    border-radius: 20px;
+    padding: 10px 10px;
+    overflow-x: auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Playfair";
+    color: white;
+    overflow: scroll;
+}
+th{
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ff4571;
+    padding: 10px 10px;
+}
+th, td {
+    text-align: center; 
+    vertical-align: middle; 
+}
+td{
+    font-size: 1.3rem;
+    padding: 10px 5px;
+}
+.option{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+td .option a{
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    transition: all 0.4s ease;
+}
+.op1{
+    background-color: #ff4571;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    transition: all 0.4s ease;
+    border: none;
+    font-size: 1.2rem;
+    font-family: "Playfair";
+    cursor: pointer;
+}
+.op2{
+    background-color: #fff0ea;
+    color: #ff9fb6;
+}
+.op1:hover,.op2:hover{
+    transform: scale(110%);
+}
+/* create emp */
+.create-part,.cp2{
+    display: none;
+    position: absolute;
+    top: 180px;
+    width: 100%;
+    justify-content: center;
+}
+.box-column{
+    display: flex;
+    position: relative;
+    width: 40%;
+    flex-direction: column;
+    text-align: center;
+    background-color: #ff9fb6;
+    color: white;
+    padding: 20px 20px;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+#eks{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+.box-column h1{
+    font-size: 2.5rem;
+}
+.flex-box{
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;
+    gap: 20px;
+}
+.sex-part{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.3rem;
+}
+.left-box,.right-box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.left-box input,.right-box input, .right-box select{
+    width: 100%;
+    height: 50px;
+    padding: 5px 10px;
+    font-family: "Playfair";
+    font-size: 1.2rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+.box-column form button{
+    width: 130px;
+    height: 50px;
+    background-color: #ff4571;
+    border: none;
+    color: white;
+    font-size: 1.7rem;
+    font-family: "Playfair";
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.box-column form button:hover{
+    transform: scale(110%);
+}
+.box-column form button img{
+    width: 25px;
+    height: 25px;
+    margin-bottom: -5px;
+    margin-right: 5px;
+}
+
+@media (max-width: 1366px) {
+    .cp2{
+        margin-top: -50px;
+    }
+}
+@media (max-width: 1200px){
+    .upper{
+        margin-left: 65px;
+    }
+    .content-title{
+        font-size: 2.5rem;
+    }
+    .table-bg{
+        margin: 20px 0 20px 65px;
+    }
+    .create-part{
+        top: 120px;
+    }
+    .box-column{
+        width: 50%;
+    }
+}
+@media (max-width: 800px){
+    .upper{
+        margin-left: 45px;
+    }
+    .upper button{
+        width: 125px;
+        font-size: 1.7rem;
+    }
+    .upper button img{
+        width: 27px; height: 27px;
+    }
+    .content-title{
+        font-size: 2rem;
+    }
+    .table-bg{
+        margin: 20px 0 20px 45px;
+        height: 105vh;
+    }
+    table, thead, tbody{
+        display: flex;
+        overflow: scroll;
+    }
+    tbody{
+        overflow-x: scroll;
+        height: 100vh;
+    }
+    thead{
+        margin-top: 0px;
+        border-right:2px solid #ff4571; 
+    }
+    th{
+        display: flex;
+        padding: 5px 6px 15px 6px; 
+        text-align: left; 
+        border-bottom: none; 
+        color: white; 
+    }
+    tbody tr{
+        display: flex;
+        flex-direction: column;
+    }
+    td{
+        flex: 1;
+        padding: 10px 5px;
+    }
+    .flex-box{
+        flex-direction: column;
+        padding: 20px 20px;
+        gap: 10px;
+    }
+    .box-column{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 600px){
+    .upper{
+        margin-left: 125px;
+        margin-top: 110px;
+    }
+    .upper button{
+        width: 120px;
+        font-size: 1.5rem;
+    }
+    .upper button img{
+        width: 24px; height: 24px;
+    }
+    .content-title{
+        font-size: 2rem;
+        margin-left: 10px;
+        margin-top: -100px;
+    }
+    .table-bg{
+        margin: 70px 0 20px 25px;
+        height: 100vh;
+        width: 90%;
+    }
+    table, thead, tbody{
+        display: flex;
+    }
+    tbody{
+        overflow-x: scroll;
+        height: 95vh;
+        margin-top: 0px;
+    }
+    thead{
+        width: 400px;
+        border-right:2px solid #ff4571; 
+    }
+    th{
+        display: flex;
+        padding: 5px 0px 15px 6px; 
+        text-align: left; 
+        border-bottom: none; 
+        color: white; 
+        font-size: 1.4rem;
+    }
+    tbody tr{
+        display: flex;
+        flex-direction: column;
+    }
+    td{
+        flex: 1;
+        padding: 0px 10px;
+        font-size: 1.2rem;
+    }
+    .sex-part{
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+    .box-column{
+        width: 80%;
+    }
+    .box-column h1{
+        font-size: 1.7rem;
+    }
+}
+@media (max-width: 450px){
+    .upper{
+        margin-left: 145px;
+        margin-top: 100px;
+    }
+    .content-title{
+        font-size: 2rem;
+        margin-left: 20px;
+        margin-top: -100px;
+    }
+    .table-bg{
+        margin: 70px 0 20px 20px;
+        height: 100vh;
+    }
+    tbody{
+        overflow-x: scroll;
+        height: 90vh;
+        margin-top: 2px;
+    }
+    thead{
+        margin-top: 0px;
+        width: 200px;
+        border-right:2px solid #ff4571; 
+    }
+    th{
+        display: flex;
+        padding: 7px 5px 15px 6px; 
+        text-align: left; 
+        border-bottom: none; 
+        color: white; 
+        font-size: 1.3rem;
+    }
+    .sex-part{
+        justify-content: center;
+        font-size: 1rem;
+    }
+    .box-column h1{
+        font-size: 1.5rem;
+    }
+    #eks{
+        width: 15px;
+        height: 15px;
+        right: 15px;
+    }
+}
+@media (max-width: 400px){
+    .upper{
+        margin-left: 130px;
+        margin-top: 100px;
+    }
+    .upper button{
+        width: 120px;
+        font-size: 1.5rem;
+    }
+    .upper button img{
+        width: 24px; height: 24px;
+    }
+    .content-title{
+        font-size: 2rem;
+        margin-left: 20px;
+        margin-top: -100px;
+    }
+    .table-bg{
+        margin: 70px 0 20px 20px;
+        height: 95vh;
+    }
+    table, thead, tbody{
+        display: flex;
+        overflow: hidden;
+    }
+    tbody{
+        overflow-x: scroll;
+        height: 90vh;
+        margin-top: 5px;
+    }
+    thead{
+        margin-top: 0px;
+        width: 200px;
+        border-right:2px solid #ff4571; 
+    }
+    th{
+        display: flex;
+        padding: 6px 5px 15px 6px; 
+        text-align: left; 
+        border-bottom: none; 
+        color: white; 
+        font-size: 1.2rem;
+    }
+    tbody tr{
+        display: flex;
+        flex-direction: column;
+    }
+    td{
+        flex: 1;
+        font-size: 1.2rem;
+        padding: 0px 5px;
+    }
+    
+}
+@media (max-width: 360px){
+    .table-bg{
+        height: 88vh;
+    }
+    tbody{
+        overflow-x: scroll;
+        height: 83vh;
+        margin-top: 0px;
+    }
+    thead{
+        margin-top: 0px;
+        width: 150px;
+        border-right:2px solid #ff4571; 
+    }
+    th{
+        display: flex;
+        padding: 5px 5px 15px 6px; 
+        text-align: left; 
+        border-bottom: none; 
+        color: white; 
+        font-size: 1.2rem;
+    }
+    td{
+        flex: 1;
+        padding: 0px 5px;
+    }
+    
+}

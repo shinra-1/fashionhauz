@@ -1,0 +1,25 @@
+.upper form{
+    display: flex;
+}
+.upper form label{
+    display: flex;
+    background-color: #ff9fb6;
+    border-radius: 20px 0px 0px 20px;
+}
+.upper form label img{
+    width: 32px;
+    height: 32px;
+    margin: 8px 5px 0px 10px;
+}
+.upper form select{
+    outline: none;
+    border: 1px solid #ff9fb6;
+    font-size: 1.2rem;
+    font-family: "Playfair";
+    cursor: pointer;
+}
+.upper form button{
+    width: 50px;
+    padding-left: 8px;
+    border-radius: 0 20px 20px 0px;
+}

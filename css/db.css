@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+section{
+    position: relative;
+    margin-top: 60px;
+}
+.container{
+    display: grid;
+    margin: 10px 20px;
+    padding: 20px 20px;
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    grid-auto-rows: minmax(100px, auto);
+    background-color: #f0839d;
+    border-radius: 30px;
+}
+.block1{
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+.block2{
+    grid-column: 2 / 3;
+    grid-row: 1;
+}
+.block1,.block2,.block3,.block6,.block7,.block8{
+    width: 430px;
+    padding: 10px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    font-family: "Playfair";
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    font-size: 1.5rem;
+    color: #f0839d;
+}
+.block4{
+    grid-column: 4 / 5;
+    grid-row: 1;
+    padding-top: 10px;
+    background-color: white;
+    border-radius: 20px;
+    font-family: "Playfair";
+    justify-content: start;
+    text-align: center;
+    font-size: 2rem;
+    color: #f0839d;
+    height: 160px;
+    width: 410px;
+}
+.block9{
+    grid-column: 4 / 5;
+    grid-row: 2;
+    padding-top: 10px;
+    background-color: white;
+    border-radius: 20px;
+    font-family: "Playfair";
+    justify-content: start;
+    text-align: center;
+    font-size: 1rem;
+    color: #f0839d;
+    height: 160px;
+    width: 410px;
+}
+.scrollbar{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    overflow-y: scroll;
+    border-radius: 20px; 
+    margin-left: -9px;
+}
+.block4 .scrollbar::-webkit-scrollbar, .block9 .scrollbar::-webkit-scrollbar{
+    width: 10px;
+    background-color: transparent;
+}
+.block4 .scrollbar::-webkit-scrollbar-thumb, .block9 .scrollbar::-webkit-scrollbar-thumb{
+    background: #ea2f6e; 
+    border-radius: 10px;
+}
+.block4 ul, .block9 ul{
+    list-style-type: none;
+    font-size: 1.5rem;
+}
+.block4 ul li, .block9 ul li{
+    margin-bottom: 10px;
+}
+.block-title{
+    font-size: 1.5rem;
+}
+.block-content{
+    font-size: 2.5rem;
+    color: #ea2f6e;
+}
+.block5{
+    grid-column: 1 / 5;
+    grid-row: 3;
+    width: 100%;
+    border-radius: 30px;
+    background: white;
+    color: #f0839d;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+/* change banner button */
+.banner{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin-top: 55px;
+    margin-bottom: -60px;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    float: left;
+}
+.banner button{
+    display: flex;
+    position: absolute;
+    gap: 5px;
+    left: 0;
+    margin: 0 20px;
+    padding: 7px 20px;
+    height: 40px;
+    width: auto;
+    background-color: #f0839d;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    font-family: "Playfair";
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 1ms ease-in-out;
+    &:hover{
+        transform: scale(110%);
+    }
+}
+
+/* logout button */
+.logout{
+    width: 50%;
+    display: flex;
+    margin-top: 80px;
+    margin-bottom: -30px;
+    align-items: center;
+    padding: 0px 20px;
+}
+.logout button{
+    display: flex;
+    position: absolute;
+    gap: 5px;
+    right: 0;
+    margin: 0 20px;
+    padding: 7px 20px;
+    height: 40px;
+    width: 140px;
+    background-color: #f0839d;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    font-family: "Playfair";
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 1ms ease-in-out;
+    &:hover{
+        transform: scale(110%);
+    }
+}
+.logout button img,.banner button img{
+    width: 25px;
+    height: 25px;
+}
+
+
+/* banner picture modal */
+.create-part,.cp2{
+    display: none;
+    position: absolute;
+    top: 210px;
+    width: 100%;
+    justify-content: center;
+}
+.box-column{
+    display: flex;
+    position: relative;
+    width: 40%;
+    flex-direction: column;
+    text-align: center;
+    background-color: #ff9fb6;
+    color: white;
+    padding: 20px 20px;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+#eks{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+.box-column h1{
+    font-size: 2.5rem;
+}
+.flex-box{
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;
+    gap: 20px;
+}
+.box-column form button{
+    width: 130px;
+    height: 50px;
+    background-color: #ff4571;
+    border: none;
+    color: white;
+    font-size: 1.7rem;
+    font-family: "Playfair";
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.box-column form button:hover{
+    transform: scale(110%);
+}
+.box-column form button img{
+    width: 25px;
+    height: 25px;
+    margin-bottom: -5px;
+    margin-right: 5px;
+}
+
+@media (max-width: 1600px){
+    .block1,.block2,.block3,.block6,.block7,.block8{
+        width: 350px;
+    }
+    .block4,.block9{
+        width: 330px;
+    }
+}
+@media (max-width: 1366px){
+    section{
+        margin-top: 60px;
+    }
+    .container{ 
+        gap: 40px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .block1,.block2,.block3,.block6,.block7,.block8,.block4{
+        width: 100%;
+    }
+    .block5{
+        width: 100%;
+    }
+}
+@media (max-width: 1200px){
+    section{
+        margin-top: 60px;
+    }
+    .container{
+        gap: 40px;
+    }
+    .block1,.block2,.block3,.block4{
+        width: 250px;
+    }
+    .block5{
+        width: 1160px;
+    }
+}
+@media (max-width: 800px){
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    .block1{
+        grid-column: 1/2;
+        grid-row: 1;
+    }
+    .block2{
+        grid-column: 2/3;
+        grid-row: 1;
+    }
+    .block3{
+        grid-column: 1/2;
+        grid-row: 2;
+    }
+    .block1,.block2,.block3,.block4{
+        width: 340px;
+    }
+    .block4{
+        grid-column: 2/3;
+        grid-row: 2;
+    }
+    .block5{
+        grid-column: 1/5;
+        grid-row: 3;
+        width: 760px;
+    }
+}
+@media (max-width: 600px){
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .block1{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .block2{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .block3{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .block4{
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .block5{
+        grid-column: 1;
+        grid-row: 9;
+        margin-top: 0px;
+        margin-left: -20px;
+        margin-bottom: -20px;
+        width: 280px;
+    }
+    .block1,.block2,.block3,.block6,.block7,.block8,.block9{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 20px;
+        font-family: "Playfair";
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+        font-size: 1.5rem;
+        color: #f0839d;
+    }
+    .block9{
+        grid-column: 1;
+        grid-row: 8;
+        width: 280px;
+    }
+    .block6{
+        grid-column: 1;
+        grid-row: 5;
+        width: 280px;
+    }
+    .block7{
+        grid-column: 1;
+        grid-row: 6;
+        width: 280px;
+    }
+    .block8{
+        grid-column: 1;
+        grid-row: 7;
+        width: 280px;
+    }
+
+    /* change banner button */
+    .banner{
+        float: none;
+    }
+    .banner button{
+        left: 3%;
+    }
+    /* logout button */
+    .logout button{
+        left: 25%;
+    }
+    /* banner picture modal */
+    .create-part,.cp2{
+        top: 180px;
+    }
+    .box-column{
+        width: 90%;
+    }
+    .box-column h1{
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+    
+
+}
+@media (max-width: 360px){
+    .block1,.block2,.block3{
+        width: 280px;
+        padding: 10px 0 10px 0;
+    }
+    .block4{
+        width: 280px;
+    }
+    .block5{
+        width: 320px;
+    }
+}

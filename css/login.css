@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Playfair";
+    margin: 7%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+.background-blur {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url(../images/bg.jpg) center/cover no-repeat;
+    filter: blur(10px);
+}
+.container{
+    position: relative;
+    width: 50%;
+    max-width: 100%;
+    min-height: 100px;
+    height: 480px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 50px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+                0 10px 10px rgba(0,0,0,0.22);
+}
+.log-in, .sign-up{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: all 0.6 ease-in-out;
+}
+.log-in{
+    width: 50%;
+    z-index: 2;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+.sign-up{
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    height: 100%;
+    text-align: center;
+}
+form h1{
+    font-family: "Playfair";
+    text-align: end;
+    margin: 0;
+    padding: 0;
+    color: #ea2f6e;
+}
+.loginhead{
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+.reghead{
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+form .label{
+    font-family: "Playfair";
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+    color: #ea2f6e;
+}
+form .showpw{
+    width: 100%;
+    font-family: "Playfair";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+form .showpw input{
+    width: 20px;
+    height: 20px;
+}
+form .showpw label{
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+input{
+    padding: 10px;
+    margin: 5px 0px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid black;
+    outline: none;
+    text-align: center;
+    font-family: "Playfair";
+    font-size: 1.2rem;
+}
+.icon-user {
+    background: url('../icons/user.png') no-repeat left 10px center;
+}
+.icon-email {
+    background: url('../icons/email.png') no-repeat left 10px center;
+}
+.icon-pw {
+    background: url('../icons/password.png') no-repeat left 10px center;
+}
+.submit{
+    width: 50%;
+    height: 35px;
+    color: white;
+    background-color: #ea2f6e;
+    font-family: "Playfair";
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 80ms ease-in;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+.submit:active{
+    transform: scale(0.90);
+}
+h4{
+    font-family: "Playfair";
+    font-size: 1.2rem;
+}
+.flex-lipat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#lipat-right,#lipat-left{
+    width: 80px;
+    font-size: 1.2rem;
+    height: 50px;
+    background: none;
+    font-family: "Playfair";
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.container.right-panel-active .log-in{
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.6s ease-in-out;
+}
+.container.right-panel-active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    transition: transform 0.6s ease-in-out;
+}
+.overlay-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+    border-radius: 10px;
+}
+.container.right-panel-active .overlay-container{
+    transform: translateX(-100%);
+}
+.overlay{
+    position: relative;
+    color: white;
+    background: #f0839d;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    text-align: center;
+    transition: transform 0.6s ease-in-out;
+}
+.container.right-panel-active .overlay{
+    transform: translateX(50%);
+}
+.overlay-left, .overlay-right{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+.overlay-left img, .overlay-right img{
+    width: 75%;
+    height: 50%;
+}
+.overlay-left{
+    transform: translateX(-20%);
+}
+.overlay-right{
+    right: 0;
+    transform: translateX(0);
+}
+.container.right-panel-active .overlay-left{
+    transform: translateX(0);
+}
+.container.right-panel-active .overlay-right{
+    transform: translateX(20%);
+}
+.errormsg{
+    color: white;
+    background:#f0839d;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: "Playfair";
+}
+.forgot{
+    padding-top: 15px;
+}
+
+@media (max-width: 1366px) {
+    .container{
+        width: 50%;
+        height: 450px;
+        margin-left: 50px;
+    }
+    #lipat-right,#lipat-left{
+        width: 70px;
+    }
+}
+@media (max-width: 1200px) {
+    h4{
+        font-size: 0.8rem;
+    }
+    #lipat-right,#lipat-left{
+        width: 60px;
+    }
+    .overlay-left img, .overlay-right img{
+        width: 75%;
+        height: 40%;
+    }
+    .loginhead{
+        font-size: 2.5rem;
+        padding-top: -1rem;
+    } 
+    .reghead {
+        font-size: 2rem; /* Smaller font size on mobile */
+    }
+    form .label {
+        font-size: 1.5rem; /* Smaller label font size */
+    }
+}
+@media (max-width: 800px) {
+    .container {
+        width: 80%;
+        height: 500px;
+        margin-top: 50px; /* Take full width on smaller screens */
+    }
+    .loginhead{
+        font-size: 2.5rem;
+        margin-top: -2rem;
+    } 
+    .reghead {
+        font-size: 2rem; /* Smaller font size on mobile */
+    }
+    h4{
+        font-size: 1rem;
+    }
+    form .label {
+        font-size: 1.5rem; /* Smaller label font size */
+    }
+    .submit {
+        width: 60%; /* Increase button width on mobile */
+    }
+    .overlay-left img, .overlay-right img{
+        width: 50%;
+        height: 25%;
+    }
+}
+@media (max-width: 600px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        width: 100%;
+        height: 350px;
+        margin-top: 100px;
+        margin-left: 0px;
+    }
+    .loginhead{
+        font-size: 2rem;
+        margin-top: 0rem;
+        margin-bottom: 1rem;
+    } 
+    .reghead {
+        font-size: 1.5rem; /* Smaller font size on mobile */
+        margin-bottom: 10px;
+    }
+    form .label {
+        font-size: 1rem; /* Smaller label font size */
+        margin-bottom: 0rem;
+    }
+    input {
+        font-size: 1rem;
+        height: 30px;
+    }
+    form .showpw label{
+        font-size: 0.9rem;
+    }
+    form .showpw input{
+        width: 10px;
+    }
+    .flex-lipat{
+        flex-direction: column;
+    }
+    h4{
+        font-size: 0.9rem;
+    }
+    #lipat-right,#lipat-left{
+        font-size: 0.9rem;
+        height: 30px;
+    }
+    .overlay-left img, .overlay-right img{
+        width: 70%;
+        height: 35%;
+    }
+    .submit{
+        font-size: 1rem;
+        width: 100px;
+    }
+    .loginbut{
+        margin-top: 0px;
+        margin-bottom: -10px;
+    }
+    .sign-up form .regbut{
+        margin-top: 0px;
+    }
+    .sign-up form span{
+        font-size: 0.8rem;
+    }
+
+    .errormsg{
+        padding: 5px 0px;
+        font-size: 0.7rem;
+        margin-top: -15px;
+    }
+
+    .forgot{
+        font-size: 0.8rem;
+    }
+}

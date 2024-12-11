@@ -1,0 +1,19 @@
+
+.left-box input,.right-box input{
+    width: 320px;
+}
+.box-column form button{
+    margin-left: 0px;
+}
+@media (max-width: 1200px){
+    .left-box input,.right-box input{
+        width: 300px;
+        height: 40px;
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 800px){
+    .left-box input,.right-box input{
+        width: 100%;
+    }
+}

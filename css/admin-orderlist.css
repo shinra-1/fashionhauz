@@ -1,0 +1,144 @@
+.prodimgg{
+    width: 50px;
+    height: 50px;
+}
+.upper{
+    display: flex;
+    height: 50px;
+    width: 90%;
+    justify-content: space-between;
+    margin-left: 5%;
+}
+
+.flex-box{
+    padding: 10px 20px;
+}
+.flex-box .right-box label, .flex-box .left-box label{
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 0px 5px;
+}
+#categori{
+    width: 180px;
+}
+#ekis, #ekiss, #close-status, #close-address, #close-itemm, #close-payment{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+.prodimg{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+/* payment receipt */
+.payment-container{
+    display: flex;
+    position: absolute;
+    top: 180px;
+    width: 100%;
+    justify-content: center;
+}
+.cp4{
+    margin-top: -60px;
+    margin-left: 20%;
+    height: 600px;
+    width: 60%;
+    z-index: 100;
+}
+.payment-box{
+    display: flex;
+    position: relative;
+    width: 40%;
+    flex-direction: column;
+    text-align: center;
+    background-color: #ff9fb6;
+    color: white;
+    padding: 20px 20px;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+.cp4 .payment-box .picreceipt{
+    height: 100%;
+    padding: 20px 20px;
+}
+@media (max-width: 1366px) {
+    .cp2{
+        margin-top: -50px;
+    }
+    .cp4 .payment-box .picreceipt{
+        height: 430px;
+        padding: 10px 20px;
+    }
+    .cp4{
+        margin-top: -60px;
+        margin-left: 20%;
+        height: 500px;
+        width: 60%;
+        z-index: 100;
+    }
+ #close-payment{
+        width: 18px;
+        height: 18px;  
+        right: 18px;
+    }
+}
+@media (max-width: 600px){
+    .table-bg{
+        margin: 70px 0 20px 20px;
+        height: 93vh;
+    }
+    .table-bg table thead{
+        width: 250px;
+    }
+    .table-bg table thead th{
+        padding: 5px 0px 25px 5px;
+    }
+    .table-bg table tbody{
+        height: 88vh;
+        max-width: 200px;
+    }
+    .table-bg table tbody tr td{
+        padding: 5px 10px 5px 0px;
+    }
+    /* item details */
+    .create-part{
+        height: 500px;
+    }
+    .create-part .box-column{
+        width: 81%;
+    }
+    .create-part .box-column h1{
+        margin-bottom: 20px;
+    }
+    .create-part .box-column table thead{
+        width: 80px;
+    }
+    .create-part .box-column table thead th{
+        padding: 11px 0 40px 0;
+    }
+    .create-part .box-column table tbody{
+        height: 380px;
+    }
+    .create-part .box-column table tbody tr td{
+        padding: 0px 10px 0px 0px;
+    }
+    .create-part .box-column table tbody tr td img{
+        height: 70px;
+        width: 70px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    /* adress */
+    .cp2{
+        height: 125vh;
+    }
+    /* update status */
+    .cp3{
+        height: 37vh;
+    }
+}

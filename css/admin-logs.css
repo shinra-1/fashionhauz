@@ -1,0 +1,146 @@
+.upper form{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 10px 10px;
+    margin-left: -10px;
+    font-family: "Playfair";
+}
+.upper .labeldate{
+    width: 50px;
+    height: 50px;
+    background: #ff9fb6;
+    color: white;
+    padding: 8px 13px;
+    border-radius: 20px 0 0 20px;
+}
+.upper .aa{
+    border-radius: 0 0 0 0;
+    padding: 8px 7px;
+    width: 45px;
+}
+.upper .aaa{
+    padding: 8px 9px;
+}
+.upper .inputdate, .upper .inputuname{
+    height: 50px;
+    padding: 10px 10px;
+    font-size: 1rem;
+    border: 1px solid #ff9fb6;
+    outline: none;
+    font-family: "Playfair";
+}
+.upper .inputdate{
+    width: 150px;
+}
+.combobox{
+    width: 150px;
+    height: 50px;
+    outline: none;
+    border: 1px solid #ff9fb6;
+    font-size: 1.2rem;
+    font-family: "Playfair";
+}
+.upper .buttondate{
+    border-radius: 0 20px 20px 0;
+    height: 50px;
+    width: 60px;
+}
+#ekis, #ekiss, #close-status, #close-address, #close-item{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+@media (max-width: 1366px){
+    .upper .labeldate{
+        height: 44px;
+    }
+    .upper .labeldate img{
+        height: 29px;
+    }
+    .upper .aa{
+        padding: 8px 7px;
+    }
+    .upper .aaa{
+        padding: 8px 11px;
+    }
+    .upper .inputdate, .upper .inputuname{
+        height: 44px;
+        width: 135px;
+        font-size: 1rem;
+    }
+    .combobox{
+        width: 130px;
+        height: 43px;
+        font-size: 1rem;
+        margin-top: 1px;
+    }
+    .upper .buttondate{
+        font-size: 1rem;
+        border-radius: 0 20px 20px 0;
+        height: 44px;
+        width: 60px;
+    }
+    .upper .buttondate img{
+        width: 25px;
+        height: 25px;
+    }
+}
+@media (max-width: 600px){
+    .upper form{
+        margin-bottom: 100px;
+        height: 50px;
+        padding: 10px 10px;
+        margin-left: -120px;
+        width: 100%;
+    }
+    .upper .labeldate{
+        height: 44px;
+    }
+    .upper .labeldate img{
+        height: 27px;
+    }
+    .upper form label .inputdate, .upper form .combobox{
+        width: 200px;
+    }
+    .combobox{
+        height: 44px;
+        margin-top: 0px;
+    }
+    .upper .aa{
+        border-radius: 0 0 0 0;
+        padding: 8px 0px 0 5px;
+        width: 50px;
+    }
+
+
+    /* table */
+    .table-bg{
+        height: 45vh;
+    }
+    tbody{
+        overflow-x: scroll;
+        height: 40vh;
+        margin-top: 0px;
+        max-width: 200px;
+    }
+    thead{
+        margin-top: 0px;
+        width: 100%;
+        border-right:2px solid #ff4571; 
+    }
+    th{
+        display: flex;
+        margin: 0px 0px 22px 0px; 
+        text-align: left; 
+        border-bottom: none; 
+        color: white; 
+        font-size: 1.2rem;
+    }
+    td{
+        flex: 1;
+        padding: 0px 5px;
+    }
+}
