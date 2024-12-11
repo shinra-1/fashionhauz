@@ -1,0 +1,42 @@
+.second{
+    margin-top: 10px;
+}
+.first{
+    margin-top: 20px;
+}
+.stock-ticker{
+    --gap: 90px;
+    font-size: 2.5rem;
+    padding-block: 8px;
+    background: #ff7d9b;
+    color: white;
+    user-select: none;
+    display: flex;
+    overflow: hidden;
+    gap:var(--gap);
+    
+}
+.stock-ticker ul{
+    list-style: none;
+    display: flex;
+    flex-shrink: 0;
+    min-width: 100%;
+    justify-content: space-between;
+    gap:var(--gap);
+    align-items: center;
+    overflow: hidden;
+    animation: scroll 20s linear infinite;
+}
+.stock-ticker .all{
+    font-weight: bold;
+    margin-inline: 4px;
+}
+@keyframes scroll{
+    to{
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+@media (max-width: 600px){
+
+}

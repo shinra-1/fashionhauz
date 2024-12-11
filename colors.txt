@@ -1,0 +1,6 @@
+page bg: #fff0ea
+menubar color: #ff9fb6 light
+title color : #ff9fb6 bold
+accept/update button: #ff4571
+reject/delete button: #fff0ea text color: #ff9fb6
+div bg: #ff9fb6

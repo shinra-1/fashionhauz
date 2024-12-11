@@ -1,0 +1,148 @@
+footer{
+    width: 100%;
+    position: relative;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Playfair";
+    padding: 20px 20px;
+    background-color: #ff9fb6;
+    color: white;
+}
+footer .footer-left{
+    display: flex;
+    position: relative;
+    align-items: start;
+    font-family: "Playfair";
+    width: 70%;
+}
+footer .footer-right{
+    display: flex;
+    position: relative;
+    width: 30%;
+    justify-content: center;
+    align-items: start;
+    font-family: "Playfair";
+}
+.sub-left{
+    display: flex;
+    position: relative;
+    justify-content: end;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+.sub-left h3{
+    font-size: 2rem;
+}
+.sub-left .deets{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sub-left .deets a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+.sub-left .deets a:hover{
+    color: #ea2f6e;
+}
+.sub-left .deets p{
+    font-size: 1.5rem;
+}
+.sub-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    gap: 10px;
+    font-size: 1.5rem;
+}
+.sub-right h3{
+    text-align: center;
+    font-size: 2.5rem;
+}
+.sub-right .deets{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sub-right .deets form{
+    width: 100%;
+    height: auto;
+    font-family: "Playfair";
+    display: flex;
+    justify-content: center;
+}
+.sub-right .deets form input{
+    width: 70%;
+    height: 40px;
+    font-family: "Playfair";
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    padding: 5px 5px;
+}
+.sub-right .deets form button{
+    width: 100px;
+    height: 40px;
+    font-family: "Playfair";
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    padding: 5px 5px;
+    color: white;
+    background-color: #ea2f6e;
+    cursor: pointer;
+}
+
+@media (max-width: 1366px){
+    footer{
+        height: 250px;
+    }
+    .sub-left h3{
+        font-size: 1.5rem;
+    }
+    .sub-right h3{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .sub-right .deets h4{
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+    .sub-left .deets p{
+        font-size: 1.2rem;
+    }
+    .sub-left .deets a{
+        font-size: 1.2rem;
+    }
+    .sub-right .deets form input{
+        font-size: 1.2rem;
+    }
+    .sub-right .deets form button{
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 600px){
+    footer{
+        height: 500px;
+        flex-direction: column;
+    }
+    footer .footer-left{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    footer .footer-right{
+        width: 100%;
+    }
+
+}
+
+

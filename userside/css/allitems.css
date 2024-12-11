@@ -1,0 +1,85 @@
+.container{
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container h1{
+    color: #ea2f6e;
+    font-size: 3rem;
+}
+.card-container{
+    width: 100%;
+    height: auto;
+    padding: 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 270px;
+    height: 450px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background: #ff7d9b;
+    border-radius: 30px;
+    padding: 20px 20px;
+    color: white;
+    font-family: "Playfair";
+}
+.card img{
+    width: 220px;
+    height: 250px;
+    border-radius: 30px;
+}
+.card h2{
+    font-size: 2rem;
+}
+.card p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    max-height: 4.5em;
+}
+.card .addcart .itemlink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background: #ea2f6e;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+.card  .addcart{
+    text-decoration: none;
+    color: white;
+    font-family: "Playfair";
+    font-size: 1.5rem;
+    width: 75%;
+    margin-top: 10px;
+}
+.card .addcart .itemlink svg{
+    width: 35px;
+    height: 35px;
+    fill: white;
+    transition: all 0.3s ease-in-out;
+}
+.card .addcart:hover{
+    color: #ea2f6e;
+    .itemlink svg{
+        fill: #ea2f6e;
+    }
+    .itemlink{
+        background: white;
+    }
+}

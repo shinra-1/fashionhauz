@@ -1,0 +1,248 @@
+main{
+    margin-top: 60px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    gap: 20px;
+    height: auto;
+    margin-bottom: 100px;
+}
+.container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    gap: 20px;
+}
+.container h1{
+    color: #ea2f6e;
+    font-size: 2.5rem;
+}
+.container .cart-container{
+    width: 95%;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    gap: 20px;
+    height: 100%;
+    background: #ff7d9b;
+    border-radius: 30px;
+    padding: 20px 20px;
+}
+.cart-container img{
+    width: 150px;
+    height: 100%;
+    border-radius: 20px;
+}
+.middle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    height: 100%;
+    font-family: "Playfair";
+    color: white;
+    gap: 20px;
+}
+.middle .con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    width: 100%;
+}
+.middle .prodname{
+    font-size: 2rem;
+}
+.middle h4{
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+.box-categ,.box-qty,.box-price,.box-size{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.box-qty input{
+    font-family: "Playfair";
+    font-size: 1.2rem;
+    width: 50px;
+    outline: none;
+    border: none;
+    height: 30px;
+    text-align: center;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    gap: 20px;
+    height: 100%;
+}
+.right form button{
+    width: 140px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    font-family: "Playfair";
+    font-size: 1.5rem;
+    border-radius: 30px;
+    background-color: #ea2f6e;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.right form button:hover{
+    background-color: white;
+    color: #ea2f6e;
+    svg{
+        fill: #ea2f6e;
+    }
+}
+.right form button svg{
+    fill: white;
+    width: 40px;
+    height: 35px;
+}
+.right h2{
+    color: white;
+}
+
+
+.checkout-form{
+    width: 17%;
+    height: auto;
+    display: flex;
+    height: 200px;
+    position: sticky;
+    top: 23.5%;
+    background: #ff7d9b;
+    border-radius: 30px;
+}
+.checkout-form form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10%;
+}
+.checkout-form form .box-est{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    font-family: "Playfair";
+    color: white;
+}
+.box-est h3{
+    font-size: 1.5rem;
+}
+.box-est h2{
+    font-size: 1.5rem;
+}
+.checkout-form form .box-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+    gap: 20px;
+}
+.checkout-form form .box-button button{
+    width: 80%;
+    height: 40px;
+    background-color: #ea2f6e;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    font-family: "Playfair";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.checkout-form form .box-button button:hover{
+    color: #ea2f6e;
+    background-color: white;
+    svg{
+        fill: #ea2f6e;
+    }
+}
+.checkout-form form .box-button button svg{
+    width: 30px;
+    height: 27px;
+    fill: white;
+}
+
+
+
+@media (max-width: 600px){
+    main{
+        margin-top: 60px;
+        flex-direction: column;
+        margin-bottom: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        flex-direction: column;
+        width: 95%;
+    }
+    .container .cart-container{
+        flex-direction: column;
+        width: 100%;
+    }
+    .cart-container img{
+        width: 100%;
+        height: 80%;
+        border-radius: 20px;
+    }
+    .middle{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .middle .con{
+        flex-direction: column;
+    }
+
+    .right{
+        width: 100%;
+        flex-direction: row;
+    }
+    .right h2{
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    /* checkout form */
+    .checkout-form{
+        width: 90%;
+        height: auto;
+        display: flex;
+        height: 200px;
+        position: sticky;
+        top: 23.5%;
+        background: #ff7d9b;
+        border-radius: 30px;
+    }
+}

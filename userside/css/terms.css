@@ -1,0 +1,26 @@
+.main{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+.header h1{
+    font-size: 2.5rem;
+    color: #ea2f6e;
+}
+.header h3{
+    font-size: 1.5rem;
+    color: #ea2f6e;
+}
+.header h4{
+    font-size: 1.2rem;
+    color: #ea2f6e;
+}
+.header h1,.header h3,.header h4{
+    text-align: center;
+    font-family: "Playfair";
+}

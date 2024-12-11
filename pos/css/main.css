@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+section{
+    display: flex;
+    position: relative;
+    margin-top: 60px;
+    padding: 0px 20px;
+    gap: 2%;
+}
+.item-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 20px;
+}
+/* category search */
+.cate-box form{
+    display: flex;
+    align-items: center;
+}
+.cate-box form select{
+   width: 200px;
+   font-size: 1.5rem;
+   height: 45px;
+   font-family: "Playfair";
+   outline: none;
+   border: 1px solid #ff9fb6;
+   padding-left: 10px;
+   border-radius: 20px 0px 0px 20px;
+}
+.cate-box form button{
+    height: 45px;
+    width: 50px;
+    background-color: #ff9fb6;
+    border: none;
+    cursor: pointer;
+    padding-right: 5px;
+    border-radius: 0 20px 20px 0;
+ }
+/* item cards */
+.item-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+.item-cards .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    text-align: center;
+    gap: 50px;
+    background-color: #ff9fb6;
+    color: white;
+    border-radius: 20px;
+    width: 250px;
+    font-family: "Playfair";
+    font-size: 1.5rem;
+}
+.item .pic{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+.item .width{
+    width: 100%;
+}
+.item form input{
+    text-align: center;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Playfair";
+    outline: none;
+    cursor: auto;
+}
+.item select{
+    width: 120px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: "Playfair";
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+.item .but{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 35px;
+    background-color: #ea2f6e;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Playfair";
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px 0 0 15%;
+    gap: 5px;
+}
+.item .but img{
+    height: 25px;
+    width: 25px;
+}
+
+/* cart */
+.cart-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 20px;
+    font-family: "Playfair";
+    height: 80vh;
+}
+.cart-container .container2{
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ff9fb6;
+    border-radius: 20px;
+}
+.cart-container .container2 .header{
+    display: flex;
+    margin: 20px 20px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #ea2f6e;
+    font-size: 2rem;
+    color: white;
+}
+.cart-container .container2 .checkout-form{
+    display: flex;
+    height: 85%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-container .container2 .cart-items{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    color: white;
+    padding: 10px 10px;
+}
+.cart-container .container2 .cart-items .cart-item{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    font-size: 1.5rem;
+}
+.cart-container .container2 .cart-items .cart-item .left{
+    display: flex;
+    flex-direction: column;
+}
+.cart-container .container2 .cart-items .cart-item .middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-container .container2 .cart-items .cart-item .right{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.cart-container .container2 .cart-items .cart-item .right a{
+    text-decoration: none;
+    color: white;
+    background-color: #ea2f6e;
+    width: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+.cart-container .container2 .checkout-form span{
+    border: 2px solid #ea2f6e;
+    width: 90%;
+}
+.cart-container .container2 .checkout-form .print-box{
+    color: white;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-container .container2 .print-box button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 150px;
+    height: 35px;
+    background-color: #ea2f6e;
+    color: white;
+    outline: none;
+    border: none;
+    font-family: "Playfair";
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: transform 0.2s ease-in;
+    &:hover{
+        transform: scale(105%);
+    }
+}
+.cart-container .container2 .print-box button img{
+    width: 25px;
+    height: 25px;
+}
+/* checkout sukli modal */
+.cash{
+    width: 30%;
+    height: 40px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Playfair";
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #ea2f6e;
+}
+.logout{
+    position: absolute;
+    right: 0;
+    top: 97%;
+}
+.logout button{
+    display: flex;
+    gap: 5px;
+    padding: 7px 20px;
+    height: 40px;
+    width: 140px;
+    background-color: #f0839d;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    font-family: "Playfair";
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 1ms ease-in-out;
+    &:hover{
+        transform: scale(110%);
+    }
+}
+.logout button img{
+    width: 24px;
+    height: 24px;
+}
+@media (max-width: 1366px) {
+    .print-box h2{
+        font-size: 1.2rem;
+    }
+}

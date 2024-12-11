@@ -1,0 +1,281 @@
+.container-box{
+    height: 100%;
+    width: 80%;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 3px;
+    overflow-x: auto;
+}
+.addbox{
+    width: 100%;
+    height: 60px;
+    padding: 7px 10px;
+    display: flex;
+    justify-content: end;
+}
+
+.addbox button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    background-color: #ea2f6e;
+    height: 44px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-family: "Playfair";
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    gap: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.addbox button:hover{
+    transform: scale(105%);
+}
+/* edit address */
+.heavyy{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    position: relative;
+}
+.potek{
+    width: 250px;
+    height: 100%;
+    padding: 7px 0px;
+    display: flex;
+    align-items: end;
+}
+.heavyy .potek button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    background-color: #ea2f6e;
+    height: 44px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-family: "Playfair";
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    gap: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.heavyy .potek button:hover{
+    transform: scale(105%);
+}
+
+.container-box .newbox{
+    display: flex;
+    overflow-x: auto;
+    justify-content: center;
+    align-items: center;
+}
+.container-box .newbox .box-address{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 250px;
+    padding: 10px 20px;
+    border-right: 2px solid #ea2f6e ;
+}
+.container-box .newbox .box-address:last-child{
+    border-right: 0px solid #ea2f6e ;
+}
+.container-box .newbox .box-address h3{
+    font-family: "Playfair";
+    font-size: 1.5rem;
+    color: white;
+}
+.container-box .newbox .box-address form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.container-box .newbox .box-address form button{
+    width: 60%;
+    height: 35px;
+    border: none;
+    background: #ea2f6e;
+    color: white;
+    font-family: "Playfair";
+    font-size: 1.3rem;
+    border-radius: 20px;
+    transition: all 0.4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.container-box .newbox .box-address form button:last-child{
+    background: white;
+    color: #ea2f6e;
+}
+.container-box .newbox .box-address form button:hover{
+    transform: scale(105%);
+}
+
+.section,.siction{
+    position: absolute;
+    display: none;
+    top: 20%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.newaddress{
+    width: 35%;
+    height: 100%;
+    background-color: #ff7d9b;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 20px 20px;
+}
+.newaddress form{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.newaddress form .close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+.newaddress form h2{
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+.newaddress form .address-mid{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.newaddress form .address-mid .address-left, .newaddress form .address-mid .address-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    height: auto;
+}
+.address-left input, .address-right input, .address-left select, .address-right select{
+    height: 40px;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-family: "Playfair";
+    font-size: 1.2rem;
+    border-radius: 20px;
+}
+.address-left select, .address-right select{
+    width: 68%;
+}
+
+.newaddress form button{
+    display: flex;
+    width: 25%;
+    margin-top: 20px;
+    background-color: #ea2f6e;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-family: "Playfair";
+    font-size: 1.5rem;
+    color: white;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.newaddress form button:hover{
+    transform: scale(105%);
+}
+@media (max-width: 1600px){
+    .address-left select, .address-right select{
+        width: 80%;
+    }
+}
+@media (max-width: 1366px){
+    .newaddress{
+        width: 40%;
+    }
+    .address-left input, .address-right input{
+        width: 85%;
+    }
+    .newaddress form .close{
+        width: 25px;
+        height: 25px;
+    }
+    .newaddress form button{
+        width: 30%;
+    }
+}
+
+@media (max-width: 600px){
+    .container-box .addbox{
+        justify-content: center;
+    }
+    .section .newaddress{
+        width: 90%;
+        position: relative;
+    }
+    .section .newaddress form .close{
+        width: 20px;
+        height: 20px;
+    }
+    .address-left input, .address-right input, .address-left select, .address-right select{
+        width: 90%;
+        font-size: 1rem;
+    }
+    .section .newaddress form button{
+        width: 120px;
+        font-size: 1.2rem;
+    }
+    .potek{
+        align-items: center;
+    }
+    /* edit address */
+    .siction .newaddress{
+        width: 90%;
+        position: relative;
+    }
+    .siction .newaddress form .close{
+        width: 20px;
+        height: 20px;
+    }
+    .siction .newaddress form button{
+        width: 120px;
+        font-size: 1.2rem;
+    }
+    /* show addresses */
+    .container-box .newbox{
+        overflow-x: scroll;
+    }
+    .box-address{
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,184 @@
+main{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 20px;
+}
+.container{
+    width: 70%;
+    height: auto;
+    background: #ff7d9b;
+    display: flex;
+    position: relative;
+    border-radius: 30px;
+    padding: 20px 20px;
+}
+.container .left-part{
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+.left-part img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.right-part{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-family: "Playfair";
+    color: white;
+    padding: 20px 20px;
+}
+.right-part h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.right-part p{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.box-categ{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+}
+.box-categ .categ{
+    text-align: center;
+    width: 70%;
+}
+.box-size{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    margin: 20px 0px;
+}
+
+.radio-button {
+    display: none;
+    }
+
+    /* Label as a styled button */
+    .radio-label {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #ea2f6e;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #ea2f6e;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    }
+
+    /* When a radio button is checked, style its label */
+    .radio-button:checked + .radio-label {
+    background-color: #ea2f6e;
+    color: #fff;
+}
+
+.box-qty{
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    height: 40px;
+    align-items: center;
+}
+.box-qty input{
+    height: 40px;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    padding: 0px 10px;
+    width: 100px;
+    align-self: center;
+    font-family: "Playfair";
+}
+
+.box-price{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+}
+.box-price .price{
+    text-align: center;
+    width: 83%;
+}
+.box-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    margin-top: 40px;
+}
+.box-button button{
+    display: flex;
+    width: 300px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: "Playfair";
+    background-color: #ea2f6e;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.4s ease-in-out;
+    gap: 5px;
+}
+.box-button button svg{
+    height: 40px;
+    width: 40px;
+    fill: white;
+}
+.box-button button .svg{
+    height: 30px;
+    width: 30px;
+    fill: white;
+}
+.box-button button:hover{
+    background-color: white;
+    color: #ea2f6e;
+    svg{
+        fill: #ea2f6e;
+    }
+}
+
+@media (max-width: 600px) {
+    .container{
+        width: 100%;
+        flex-direction: column;
+    }
+    .container .left-part{
+        width: 100%;
+    }
+    .box-categ .categ{
+        width: 50%;
+    }
+    .box-price .price{
+        width: 50%;
+    }
+    .box-button{
+       flex-direction: column;
+       gap: 20px;
+    }
+    .box-button button{
+        width: 250px;
+        font-size: 1.5rem;
+    }
+}

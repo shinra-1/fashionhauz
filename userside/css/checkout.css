@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+main form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ribbon{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.ribbon h2{
+    font-family: "Playfair";
+    border:2px solid gray;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: white;
+    color: gray;
+}
+.ribbon .active-ribbon{
+    color: white;
+    background-color: #ea2f6e;
+    border:2px solid #ea2f6e;
+}
+.ribbon .span{
+    border: 1px solid white;
+    width: 200px;
+    height: 2px;
+    content: "";
+}
+.ribbon .active-span{
+    border: 1px solid #ea2f6e;
+    width: 200px;
+    height: 2px;
+    content: "";
+}
+
+/* ADDRESS PAGE */
+.container{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.container .parts{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    height: 100%;
+    overflow-x: auto;
+}
+.container .parts label{
+    cursor: pointer;
+    border: 1px solid white;
+    height: 100%;
+    width: 250px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: "Playfair";
+    font-size: 1.5rem;
+    padding: 5px;
+    border-radius: 30px;
+}
+.container .parts .active-address{
+    border: 1px solid #ea2f6e;
+}
+
+.container .next{
+    width: 150px;
+    height: 35px;
+    background-color: #ea2f6e;
+    text-align: center;
+    color: white;
+    font-family: "Playfair";
+    font-size: 1.7rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.container .next:hover{
+    background-color: white;
+    color: #ea2f6e;
+}
+
+/* PAYMENT PAGE */
+.two-container{
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #ff7d9b;
+    padding: 20px 20px;
+    border-radius: 30px;
+    height: auto;
+    font-family: "Playfair";
+    color: white;
+    font-size: 1.2rem;
+}
+
+.two-container .parts-again{
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    gap: 20px;
+}
+.two-container .parts-again img{
+    width: 100%;
+    height: 300px;
+}
+.two-container .parts-again .paymentfile{
+    margin: 10px;
+    height: 30px;
+}
+.two-container .parts-again .payment-box{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    height: 90px;
+}
+.two-container .parts-again .payment-box .total-fee{
+    margin-bottom: 10px;
+}
+.two-container .next{
+    width: 50%;
+    height: 35px;
+    background-color: #ea2f6e;
+    text-align: center;
+    color: white;
+    font-family: "Playfair";
+    font-size: 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    border: none;
+}
+.two-container .next:hover{
+    background-color: white;
+    color: #ea2f6e;
+}
+
+
+/* checkout details page */
+.oldCon{
+    width: 90%;
+    background: #ff7d9b;
+    color: white;
+    padding: 20px 20px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.oldCon .ordernum{
+    font-size: 2rem;
+}
+.oldCon .date{
+    font-size: 1.5rem;
+}
+.oldCon .items{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+.oldCon .items .item-card{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0px;
+    padding: 20px 0px;
+    background: white;
+    border-radius: 30px;
+    color: #ea2f6e;
+    gap: 20px;
+}
+.oldCon .items .item-card img{
+    width: 20%;
+    height: 170px;
+    margin: 20px;
+    border-radius: 15px;
+}
+.oldCon .items .item-card .item-left{
+    width: 100%;
+    font-family: "Playfair";
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+.oldCon .items .item-card .item-up{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.oldCon .items .item-card .item-up h2{
+    font-size: 2.5rem;
+}
+.oldCon .items .item-card .item-up h3{
+    text-align: center;
+}
+.oldCon .items .item-card .item-down{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.oldCon .address-box{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.address-left, .address-right{
+    font-family: "Playfair";
+    font-size: 1.5rem;
+}
+
+
+.payment-card{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+.payment-card .paymentt{
+    font-size: 1.5rem;
+    width: 30%;
+}
+.payment-card .paymentt2{
+    width: 20%;
+    font-size: 1.5rem;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.payment-card .paymentt2 img{
+    width: 250px;
+    height: 300px;
+}
+
+
+@media (max-width: 600px){
+    
+    .container .parts{
+        display: flex;
+        width: 320px;
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        height: 100%;
+        overflow-x: auto;
+        padding: 0 30px;
+    }
+
+    .oldCon{
+        width: 100%;
+    }
+     .oldCon .items .item-card{
+        margin: 10px 0px;
+        padding: 0px 10px;
+        gap: 0px;
+        height: 250px;
+    }
+    .oldCon .items .item-card img{
+        width: 50%;
+        height: 230px;
+        margin: 0px ;
+        border-radius: 15px;
+    }
+    .oldCon .items .item-card .item-left{
+        gap: 10px;
+    }
+    .oldCon .items .item-card .item-up h2{
+        font-size: 1.5rem;
+    }
+    .oldCon .items .item-card .item-down{
+        flex-direction: column;
+        margin: 10px 10px;
+        font-size: 1rem;
+    }
+
+
+    /* address */
+    .oldCon .address-box{
+        width: 100%;
+        flex-direction: column;
+    }
+    .address-left, .address-right{
+        font-size: 1.2rem;
+    }
+
+    /* payment */
+    .payment-card{
+        flex-direction: column;
+    }
+    .payment-card .paymentt{
+        font-size: 1.2rem;
+        width: 100%;
+    }
+    .payment-card .paymentt2{
+        width: 100%;
+        font-size: 1.2rem;
+    }
+}

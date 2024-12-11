@@ -1,0 +1,56 @@
+.create-part{
+    display: none;
+    position: absolute;
+    top: 180px;
+    width: 100%;
+    justify-content: center;
+}
+.box-column{
+    display: flex;
+    position: relative;
+    width: 40%;
+    flex-direction: column;
+    text-align: center;
+    background-color: #ff7d9b;
+    color: white;
+    padding: 20px 0px;
+    border-radius: 30px;
+    border: 3px solid white;
+}
+#eks{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+.box-column h1{
+    font-size: 2.5rem;
+}
+.flex-box{
+    display: flex;
+    justify-content: center;
+    padding: 2px 20px;
+    gap: 20px;
+}
+.flex-box h3{
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding: 20px 0px;
+    font-family: "Playfair";
+}
+.flex-box h3 a{
+    color: #ea2f6e;
+}
+
+@media (max-width: 600px){
+    .create-part{
+        top: 120px;
+    }
+    .box-column{
+        width: 80%;
+    }
+    .box-column h1{
+        font-size: 2rem;
+    }
+}
